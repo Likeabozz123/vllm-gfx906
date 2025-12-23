@@ -28,7 +28,7 @@ void moe_lora_align_block_size(
     torch::Tensor sorted_token_ids, torch::Tensor expert_ids,
     torch::Tensor num_tokens_post_pad, torch::Tensor adapter_enabled,
     torch::Tensor lora_ids, std::optional<torch::Tensor> maybe_expert_map);
-#ifndef USE_ROCM
+
 torch::Tensor moe_wna16_gemm(torch::Tensor input, torch::Tensor output,
                              torch::Tensor b_qweight, torch::Tensor b_scales,
                              std::optional<torch::Tensor> b_qzeros,
